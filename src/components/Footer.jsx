@@ -44,17 +44,6 @@ export default function Footer() {
 
         <div className={styles.cols}>
           <div className={styles.col}>
-            <h3 className={styles.colTitle}>Quick Links</h3>
-            <ul className={styles.list}>
-              {[['Home', '/'], ['Apps', '/apps'], ['Installation', '/installation']].map(([label, to]) => (
-                <li key={to}>
-                  <button className={styles.footLink} onClick={() => navigate(to)}>{label}</button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.col}>
             <h3 className={styles.colTitle}>Social Links</h3>
             <div className={styles.socials}>
               {SOCIAL.map(s => (
