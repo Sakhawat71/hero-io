@@ -1,45 +1,27 @@
 import { useNavigate } from 'react-router-dom';
+import errorImage from '../assets/error-404.png';
 import styles from './NotFound.module.css';
 
 export default function NotFound() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  return (
-    <div className={`${styles.page} page-enter`}>
-      <div className={styles.content}>
-        {/* Illustration */}
-        <div className={styles.illustration}>
-          <div className={styles.laptop}>
-            <div className={styles.screen}>
-              <span className={styles.errorCode}>404</span>
-              <div className={styles.screenLine} />
-              <div className={styles.screenLine} style={{ width: '60%' }} />
+    return (
+        <div className='h-screen flex flex-col'>
+            <div className="flex-1 flex flex-col gap-5 items-center justify-center bg-gray-100 px-4">
+                <img
+                    src={errorImage}
+                    alt="404 Not Found"
+                    className="w-48 sm:w-64 md:w-80 h-auto mb-8"
+                />
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Oops, page not found!</h1>
+                <p className="text-sm sm:text-base md:text-lg text-gray-500 mb-8 text-center">The page you are looking for is not available.</p>
+                <button
+                    onClick={() => navigate('/')}
+                    className={styles.primaryBtn}
+                >
+                    Go Back!
+                </button>
             </div>
-            <div className={styles.base} />
-          </div>
-          {/* Decorative elements */}
-          <div className={styles.gear} style={{ top: 20, right: 80 }}>⚙</div>
-          <div className={styles.gear} style={{ top: 60, left: 60, fontSize: 22, animationDelay: '0.5s' }}>⚙</div>
-          <div className={styles.dot} style={{ top: 30, left: 100 }} />
-          <div className={styles.dot} style={{ top: 80, right: 60 }} />
-          <div className={styles.plus} style={{ top: 10, left: 180 }}>+</div>
-          <div className={styles.plus} style={{ top: 100, right: 40 }}>+</div>
-          {/* Plug */}
-          <div className={styles.plug}>●</div>
         </div>
-
-        <h1 className={styles.title}>Oops, page not found!</h1>
-        <p className={styles.sub}>The page you are looking for is not available.</p>
-
-        <div className={styles.actions}>
-          <button className={styles.primaryBtn} onClick={() => navigate('/')}>
-            Go Home
-          </button>
-          <button className={styles.secondaryBtn} onClick={() => navigate(-1)}>
-            Go Back!
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
+    );
+};
