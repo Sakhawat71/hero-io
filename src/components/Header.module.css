@@ -46,7 +46,7 @@
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 14.5px;
-  color: var(--text2);
+  color: linear-gradient(135deg, #6F38E6, #975BF0);
   padding: 7px 16px;
   border-radius: 10px;
   transition: background 0.15s, color 0.15s;
@@ -75,7 +75,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  background: linear-gradient(135deg, #6F38E6, #975BF0);
   color: #fff;
   font-family: var(--font-body);
   font-weight: 700;
@@ -166,7 +166,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  background: linear-gradient(135deg, #6F38E6, #975BF0);
   color: #fff;
   font-family: var(--font-body);
   font-weight: 700;
