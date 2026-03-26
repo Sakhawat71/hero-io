@@ -83,17 +83,4 @@ src/
 
 ## 🌐 Deployment
 
-### Netlify
-```toml
-# netlify.toml (already included)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-```
-
-### Vercel
-```json
-// vercel.json (already included)
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
-```
+### live link : [https://hero-io-eta.vercel.app/](https://hero-io-eta.vercel.app/)
