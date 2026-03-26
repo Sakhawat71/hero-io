@@ -32,7 +32,6 @@ npm run build
 npm run preview
 ```
 
-> **Deployment note:** When deploying to Netlify/Vercel/Cloudflare, configure your host to redirect all routes to `index.html` so React Router handles navigation. See `netlify.toml` / `vercel.json` included in this project.
 
 ## 📁 Project Structure
 
@@ -57,29 +56,6 @@ src/
 ├── main.jsx                         ← Entry point
 └── index.css                        ← Global styles + CSS vars
 ```
-
-## ✅ Features Implemented
-
-### Basic Requirements
-- ✅ Fully responsive (mobile, tablet, desktop)
-- ✅ Meaningful app name & description
-- ✅ Error-free production build
-
-### Main Requirements
-- ✅ **Header** — Logo, nav with active route, GitHub Contribute button
-- ✅ **Footer** — Custom footer with quick links and social icons
-- ✅ **16 App data objects** with full structure
-- ✅ **Home Page** — Hero banner, App Store/Play Store buttons, Stats section, 8 trending apps, Show All button
-- ✅ **All Apps Page** — Search (live, case-insensitive), "No App Found" message, app count
-- ✅ **App Details** — Image, stats, Install button (→ Installed when clicked), Recharts bar chart, description
-- ✅ **Error Pages** — Custom 404 page + App Not Found page
-
-### Challenge Requirements
-- ✅ **localStorage** — Install persists across sessions; button shows "Installed" if already saved
-- ✅ **My Installation Page** — All installed apps with Uninstall button + toast
-- ✅ **Sort by Downloads** — High→Low, Low→High dropdown
-- ✅ **Loading Animation** — Skeleton cards on search, spinner on details page load
-- ✅ **Deployment ready** — `netlify.toml` + `vercel.json` included
 
 ## 🌐 Deployment
 
