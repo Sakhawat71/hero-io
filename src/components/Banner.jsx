@@ -7,20 +7,20 @@ const Banner = () => {
 
 
     return (
-        <section className="bg-linear-to-b from-gray-50 to-purple-50/40 py-16 px-4 sm:px-8 lg:px-16">
-            <div className=" mx-auto flex flex-col gap-5 items-center text-center">
+        <section className="bg-linear-to-b from-gray-50 to-purple-50/40 py-20 px-4 sm:px-8 lg:px-16">
+            <div className="mx-auto flex flex-col gap-8 items-center text-center">
 
                 {/* Heading */}
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-gray-900 mb-5 animate-[fadeUp_0.5s_ease_both]">
                     We Build<br />
-                    <span className="bg-linear-to-r from-violet-600 to-gray-900 bg-clip-text text-transparent">
+                    <span className="text-[#9b66ef] bg-clip-text">
                         Productive
                     </span>{' '}
                     Apps
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-base sm:text-lg text-gray-500 max-w-xl leading-relaxed mb-8 animate-[fadeUp_0.5s_0.1s_ease_both]">
+                <p className="text-base sm:text-lg text-gray-500 max-w-xs md:max-w-xl leading-relaxed mb-8 animate-[fadeUp_0.5s_0.1s_ease_both]">
                     At HERO.IO, we craft innovative apps designed to make everyday life simpler,
                     smarter, and more exciting. Our goal is to turn your ideas into digital
                     experiences that truly make an impact.
@@ -28,7 +28,7 @@ const Banner = () => {
 
                 {/* Store buttons */}
                 <div className=" flex gap-3 flex-wrap justify-center animate-[fadeUp_0.5s_0.2s_ease_both]">
-                
+
                     <a href="https://play.google.com/store"
                         target="_blank"
                         rel="noreferrer"
