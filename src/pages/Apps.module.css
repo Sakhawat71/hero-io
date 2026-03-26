@@ -1,0 +1,210 @@
+.page {
+  padding: 0 clamp(16px, 5vw, 60px) 80px;
+  min-height: 80vh;
+}
+
+/* ── Title ── */
+.titleSection {
+  text-align: center;
+  padding: 64px 0 48px;
+  background: linear-gradient(180deg, #f5f7ff 0%, transparent 100%);
+  margin: 0 calc(-1 * clamp(16px, 5vw, 60px)) 40px;
+  padding-left: clamp(16px, 5vw, 60px);
+  padding-right: clamp(16px, 5vw, 60px);
+}
+
+.title {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text3);
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.count {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text2);
+}
+
+.count strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.controlsRight {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Select */
+.selectWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selectIcon {
+  position: absolute;
+  left: 12px;
+  color: var(--text3);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.select {
+  appearance: none;
+  padding: 10px 36px 10px 34px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  min-width: 200px;
+}
+
+.select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+}
+
+/* Search */
+.searchWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 13px;
+  color: var(--text3);
+  pointer-events: none;
+}
+
+.searchInput {
+  padding: 10px 38px 10px 38px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  color: var(--text);
+  outline: none;
+  min-width: 230px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.searchInput:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+}
+
+.searchInput::placeholder { color: var(--text3); }
+
+.clearBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: color 0.15s;
+}
+
+.clearBtn:hover { color: var(--red); }
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ── Empty State ── */
+.empty {
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.emptyTitle {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: 26px;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.emptySub {
+  font-family: var(--font-body);
+  color: var(--text3);
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.clearSearchBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.clearSearchBtn:hover { opacity: 0.88; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .controls { flex-direction: column; align-items: flex-start; }
+  .searchInput { min-width: 180px; }
+  .select { min-width: 180px; }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .controlsRight { width: 100%; }
+  .searchInput, .select { min-width: unset; width: 100%; }
+  .selectWrap, .searchWrap { width: 100%; }
+}

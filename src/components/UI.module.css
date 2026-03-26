@@ -1,0 +1,43 @@
+.pageLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  width: 100%;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.skeletonCard {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.skeletonImg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.skeletonBody {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeletonLine {
+  height: 14px;
+  border-radius: 6px;
+}
+
+.skeletonTag {
+  height: 22px;
+  width: 60px;
+  border-radius: 20px;
+}

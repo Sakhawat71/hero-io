@@ -1,0 +1,338 @@
+.page {
+  padding: 32px clamp(16px, 5vw, 60px) 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Not Found ── */
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(160deg, #f5f7ff, #fff);
+}
+
+.notFoundImg {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 28px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.notFoundTitle {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: 28px;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.notFoundSub {
+  font-family: var(--font-body);
+  color: var(--text3);
+  font-size: 15px;
+  max-width: 420px;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+
+.goBackBtn {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  color: #fff;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 36px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(79,70,229,0.35);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.goBackBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(79,70,229,0.42);
+}
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--accent);
+  padding: 0;
+  transition: gap 0.15s;
+}
+
+.backBtn:hover { gap: 10px; }
+
+.breadSep {
+  color: var(--text3);
+  font-size: 15px;
+}
+
+.breadCurrent {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text2);
+  font-weight: 500;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── App Header ── */
+.appHeader {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.appImageWrap {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #eef0fd;
+  box-shadow: 0 8px 32px rgba(79,70,229,0.15);
+}
+
+.appImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.appInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.appTitle {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.appCompany {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text2);
+  margin-bottom: 0;
+}
+
+.companyLink {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+/* Stats row */
+.statsRow {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statIconWrap[data-color="green"] {
+  background: #d1fae5;
+  color: #10b981;
+}
+
+.statIconWrap[data-color="amber"] {
+  background: #fef3c7;
+  color: #f59e0b;
+}
+
+.statIconWrap[data-color="indigo"] {
+  background: #eef0fd;
+  color: #4f46e5;
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text3);
+  margin-bottom: 2px;
+}
+
+.statVal {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: 26px;
+  color: var(--text);
+  line-height: 1;
+}
+
+/* Install row */
+.installRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.installBtn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(16,185,129,0.35);
+  transition: transform 0.18s cubic-bezier(.34,1.56,.64,1), box-shadow 0.18s, background 0.2s;
+}
+
+.installBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(16,185,129,0.4);
+}
+
+.installedBtn {
+  background: #6b7280 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.starsWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.starsLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text2);
+  font-weight: 600;
+}
+
+/* ── Section ── */
+.sectionDivider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+.section {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* Chart */
+.chartWrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 16px 16px;
+}
+
+.chartTooltip {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow);
+}
+
+.tooltipLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 3px;
+}
+
+.tooltipValue {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Description */
+.description {}
+
+.para {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: var(--text2);
+  margin-bottom: 18px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .appHeader { flex-direction: column; align-items: center; text-align: center; }
+  .appImageWrap { width: 160px; height: 160px; }
+  .statsRow { justify-content: center; }
+  .installRow { justify-content: center; }
+  .breadCurrent { display: none; }
+}
+
+@media (max-width: 480px) {
+  .statsRow { gap: 20px; }
+  .statVal { font-size: 22px; }
+}
